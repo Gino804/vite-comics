@@ -78,16 +78,26 @@ export default {
 <style scoped>
 header {
     height: 150px;
-    padding: 20px 0;
+}
+
+.container {
+    height: 100%;
+}
+
+figure {
+    display: flex;
+    align-items: center;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 ul {
     display: flex;
+    height: 100%;
 }
 
 li {
