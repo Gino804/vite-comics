@@ -63,18 +63,19 @@
     </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/vars' as *;
+@use '../assets/scss/partials/mixins' as *;
+
 #links {
-    background-image: url('../assets/img/footer-bg.jpg');
-    background-repeat: no-repeat;
+    @include background_img_no_repeat('../assets/img/footer-bg.jpg');
     background-size: cover;
 }
 
 #links>.container {
     display: flex;
     padding: 30px 0;
-    background-image: url('../assets/img/dc-logo-bg.png');
-    background-repeat: no-repeat;
+    @include background_img_no_repeat('../assets/img/dc-logo-bg.png');
     background-position: right;
 }
 
@@ -98,13 +99,12 @@ a {
 
 #socials>.container {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex_between;
     align-items: center;
 }
 
 .button {
-    border: 2px solid #0282F9;
+    border: 2px solid $blue;
     padding: 10px;
     color: white;
     font-weight: bold;
@@ -112,12 +112,11 @@ a {
 }
 
 #socials h3 {
-    color: #0282F9;
+    color: $blue;
 }
 
 #socials>.container>div {
-    display: flex;
-    align-items: center;
+    @include flex_center('cross');
 }
 
 #socials img {

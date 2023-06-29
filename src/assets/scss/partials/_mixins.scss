@@ -1,0 +1,29 @@
+@use "./vars" as *;
+
+@mixin header_link_active {
+  color: $blue;
+  border-bottom: 5px solid $blue;
+}
+
+@mixin flex_center($axis: both) {
+  display: flex;
+
+  @if ($axis == "main") {
+    justify-content: center;
+  } @else if ($axis == "cross") {
+    align-items: center;
+  } @else {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin background_img_no_repeat($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+}

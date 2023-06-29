@@ -75,7 +75,9 @@ export default {
     </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+
 header {
     height: 150px;
 }
@@ -85,13 +87,11 @@ header {
 }
 
 figure {
-    display: flex;
-    align-items: center;
+    @include flex_center('cross');
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    @include flex_between;
     height: 100%;
 }
 
@@ -111,17 +111,14 @@ a {
     font-size: 14px;
     font-weight: bold;
     height: 100%;
-    display: flex;
-    align-items: center;
+    @include flex_center('cross');
 }
 
 li:hover a {
-    color: #0282F9;
-    border-bottom: 3px solid #0282F9;
+    @include header_link_active;
 }
 
 .active {
-    color: #0282F9;
-    border-bottom: 3px solid #0282F9;
+    @include header_link_active;
 }
 </style>
