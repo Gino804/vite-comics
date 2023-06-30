@@ -79,7 +79,7 @@ export default {
 @use '../assets/scss/partials/mixins' as *;
 
 header {
-    height: 150px;
+    height: 120px;
 }
 
 .container {
