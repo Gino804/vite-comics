@@ -1,18 +1,20 @@
 <template>
     <main>
-        <section id="work-in-progress">
-            <div class="container">
-                <h2>Content goes here</h2>
-            </div>
+        <section id="jumbotron">
+            <img src="../assets/img/jumbotron.jpg" alt="Jumbotron">
         </section>
     </main>
 </template>
 
-<style scoped>
-#work-in-progress {
-    height: 150px;
-    line-height: 150px;
-    background-color: #1C1C1C;
-    color: white;
+<style lang="scss" scoped>
+#jumbotron {
+    height: 400px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
 }
 </style>
