@@ -70,21 +70,21 @@
 #links {
     @include background_img_no_repeat('../assets/img/footer-bg.jpg');
     background-size: cover;
-}
 
-#links>.container {
-    display: flex;
-    padding: 30px 0;
-    @include background_img_no_repeat('../assets/img/dc-logo-bg.png');
-    background-position: right;
-}
+    .container {
+        display: flex;
+        padding: 30px 0;
+        @include background_img_no_repeat('../assets/img/dc-logo-bg.png');
+        background-position: right;
 
-#links>.container>div {
-    margin-right: 20px;
-}
+        div {
+            margin-right: 20px;
+        }
+    }
 
-#links h3 {
-    color: white;
+    h3 {
+        color: white;
+    }
 }
 
 a {
@@ -95,12 +95,24 @@ a {
 #socials {
     background-color: #303030;
     height: 120px;
-}
 
-#socials>.container {
-    height: 100%;
-    @include flex_between;
-    align-items: center;
+    .container {
+        height: 100%;
+        @include flex_between;
+        align-items: center;
+
+        div {
+            @include flex_center('cross');
+        }
+    }
+
+    h3 {
+        color: $blue;
+    }
+
+    img {
+        margin-left: 20px;
+    }
 }
 
 .button {
@@ -109,17 +121,5 @@ a {
     color: white;
     font-weight: bold;
     font-size: 17px;
-}
-
-#socials h3 {
-    color: $blue;
-}
-
-#socials>.container>div {
-    @include flex_center('cross');
-}
-
-#socials img {
-    margin-left: 20px;
 }
 </style>
